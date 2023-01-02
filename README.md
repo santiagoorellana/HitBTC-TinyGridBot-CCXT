@@ -9,7 +9,7 @@ To use it read the comments in the code.
 Disclaimer:
 This code is for educational and demonstration purposes. It should not be considered an investment tool at all and its use does not make the author responsible for the results.
 
-Autor: Santiago A. Orellana Perez <br>
-Creado: 16/junio/2022 <br>
-Probado con: Python 3.10
-
+Santiago A. Orellana Pérez <br>
+Email: tecnochago@gmail.com <br>
+Mobile: +5354635944 <br>
+SetV+, Havana, Cuba, 2022
