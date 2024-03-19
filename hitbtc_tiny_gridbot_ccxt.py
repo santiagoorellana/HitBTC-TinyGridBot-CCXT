@@ -18,13 +18,13 @@ from decimal import *
 CREDENTIALS = json.loads(open('./credential_hitbtc.json').readline())
 
 CONF = {
-    'base':'BTC',	
-    'quote':'USDT',
+    'base':'ETH',	
+    'quote':'BTC',
     'amount':0.00001,		# Amount of BTC that you want to trade in each trade.
     'fee_percent':0.25,		# Fee charged by HitBTC for each market taker trade.
     'limit_down':0, 		# Lower limit below which it does not operate.
     'limit_up':21000, 		# Upper limit above which there is no operation.
-    'limit_minutes':60 		# Number of minutes that the bot is active.
+    'limit_minutes':0 		# Number of minutes that the bot is active. 0 = infinite
     }
 
 exchange = (getattr(ccxt, 'hitbtc'))({
@@ -44,19 +44,14 @@ minutes = 0
 while time.sleep(1) == None and int(CONF['limit_minutes'] > 0):
     try: 
         CONF['limit_minutes'] -= 1
-        market = exchange.fetch_ticker(CONF['base']+'/'+CONF['quote'])
+        ticker = exchange.fetch_ticker(CONF['base']+'/'+CONF['quote'])
 
         # Calculate the profit potential of the new price with respect to the last trade.
-        profit = (Decimal(float(market['last'])) - Decimal(float(lastOpp['price']))) 
-		profit = (profit / Decimal(float(lastOpp['price']))) * 100
+        delta = (Decimal(float(ticker['last'])) - Decimal(float(lastOpp['price']))) 
+		profit = (delta / Decimal(float(lastOpp['price']))) * 100
 
         # It shows the market and power data in each iteration.
-        print('{}  {:0.10f} {} potential: {:0.4f} %'.format(
-            market['datetime'],
-            market['last'],
-            CONF['quote'],
-            profit
-        ))
+        print('{} {:0.10f} {} potential: {:0.2f} %'.format(ticker['datetime'], ticker['last'], CONF['quote'], profit))
 
         # If the potential profit is above the trade fee, execute the trade.
         if (profit > thresold or profit < -thresold) and
@@ -83,7 +78,8 @@ while time.sleep(1) == None and int(CONF['limit_minutes'] > 0):
                 lastOpp['filled'],
                 CONF['quote']
             )) 
-    except: print('Retry...')
+    except: 
+		print('Retry...')
 
 
 
