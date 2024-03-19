@@ -23,8 +23,7 @@ CONF = {
     'amount':0.00001,		# Amount of BTC that you want to trade in each trade.
     'fee_percent':0.25,		# Fee charged by HitBTC for each market taker trade.
     'limit_down':0, 		# Lower limit below which it does not operate.
-    'limit_up':21000, 		# Upper limit above which there is no operation.
-    'limit_minutes':0 		# Number of minutes that the bot is active. 0 = infinite
+    'limit_up':21000 		# Upper limit above which there is no operation.
     }
 
 exchange = (getattr(ccxt, 'hitbtc'))({
@@ -41,7 +40,7 @@ thresold = Decimal(CONF['fee_percent']) * Decimal(2.75) * Decimal(100)
 marketBegin, market = exchange.fetch_ticker(CONF['base']+'/'+CONF['quote']), None
 lastOpp = {'side':'buy', 'price':marketBegin['last']}
 minutes = 0        
-while time.sleep(1) == None and int(CONF['limit_minutes'] > 0):
+while time.sleep(1) == None:
     try: 
         CONF['limit_minutes'] -= 1
         ticker = exchange.fetch_ticker(CONF['base']+'/'+CONF['quote'])
