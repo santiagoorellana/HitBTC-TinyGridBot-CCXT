@@ -9,8 +9,7 @@ Aviso legal: Este código tiene fines educativos y demostrativos. No debe consid
 
 <H3>Si necesitas hacer un bot de trading con tu propia estrategia, hacer backtesting, analisis de datos de mercados, o necesitas acesoramiento sobre bots de trading y automatización en exchanges de criptomonedas... escríbeme!</H3>
 
-Santiago A. Orellana Pérez <br>
-Email: tecnochago@gmail.com <br>
-<a href="mailto:tecnochago@gmail.com?Subject=Quiero%20un%20bot%20de%20trading">tecnochago@gmail.com</a>
-Mobile: +5354635944 <br>
+Santiago Orellana <br>
+Email: <a href="mailto:tecnochago@gmail.com?Subject=Quiero%20un%20bot%20de%20trading">tecnochago@gmail.com</a><br>
+Mobile: <a href="https://wa.me/5354635944?text=Quiero un bot de trading">+5354635944</a><br>
 SetV+, Havana, Cuba, 2022
