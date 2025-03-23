@@ -1,15 +1,16 @@
 
 <H1>HitBTC TinyGridBot with CCXT</H1>
 
-This is a sample of a small GridBot written in Python, using the CCXT library, with which it connects to the HitBTC exchange. 
-The bot operates only within the range specified in the settings and for a limited time.
+Este es un ejemplo de un pequeño GridBot escrito en Python que utiliza la biblioteca CCXT, con la que se conecta al exchange HitBTC. El bot opera solo dentro del rango especificado en la configuración y por tiempo limitado.
 
-To use it read the comments in the code.
+Para usarlo, lea los comentarios en el código.
 
-Disclaimer:
-This code is for educational and demonstration purposes. It should not be considered an investment tool at all and its use does not make the author responsible for the results.
+Aviso legal: Este código tiene fines educativos y demostrativos. No debe considerarse una herramienta de inversión y su uso no responsabiliza al autor de los resultados.
+
+<H3>Si necesitas hacer un bot de trading con tu propia estrategia, hacer backtesting, analisis de datos de mercados, o necesitas acesoramiento sobre bots de trading y automatización en exchanges de criptomonedas... escríbeme!</H3>
 
 Santiago A. Orellana Pérez <br>
 Email: tecnochago@gmail.com <br>
+<a href="mailto:tecnochago@gmail.com?Subject=Quiero%20un%20bot%20de%20trading">tecnochago@gmail.com</a>
 Mobile: +5354635944 <br>
 SetV+, Havana, Cuba, 2022
